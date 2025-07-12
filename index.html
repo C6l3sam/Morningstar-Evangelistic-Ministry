@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>MORNINGSTAR EVANGELISTIC MINISTRY</title>
   <style>
     body {
@@ -13,6 +14,7 @@
       background-position: center;
       position: relative;
       color: aliceblue;
+      overflow-x: hidden;
     }
 
     body::before {
@@ -23,14 +25,21 @@
       z-index: -1;
     }
 
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 10px;
+    }
+
     .header-container {
       display: flex;
       align-items: center;
-      padding: 20px;
+      padding: 20px 10px;
+      flex-wrap: wrap;
     }
 
     .header-container img {
-      width: 80px;
+      width: 70px;
       height: auto;
       border-radius: 50%;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -40,35 +49,27 @@
 
     nav {
       text-align: center;
-      padding: 10px 20px;
-    }
-
-    nav a {
-      display: block;
-      margin: 8px 0;
-      color: aliceblue;
-      text-decoration: none;
-      font-weight: bold;
+      padding: 10px 0;
     }
 
     .top-nav {
       display: flex;
       justify-content: center;
-      flex-wrap: nowrap; /* Keep in one line */
-      overflow-x: auto;  /* Allow horizontal scroll on small screens */
-      gap: 20px;
+      flex-wrap: wrap;
+      gap: 15px;
       background: rgba(0, 0, 0, 0.6);
-      padding: 12px 20px;
-      border-bottom: 2px solid rgba(255,255,255,0.2);
+      padding: 10px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
     }
 
     .top-nav a {
       color: aliceblue;
       text-decoration: none;
       font-weight: bold;
-      padding: 8px 12px;
+      padding: 6px 10px;
+      white-space: nowrap;
       transition: background 0.3s;
-      white-space: nowrap; /* Prevent breaking onto new line */
+      font-size: 14px;
     }
 
     .top-nav a:hover {
@@ -79,7 +80,7 @@
     footer {
       background-color: white;
       text-align: center;
-      padding: 20px;
+      padding: 15px;
       margin-top: 30px;
       color: black;
       position: relative;
@@ -92,71 +93,113 @@
 
     footer .social-icons {
       display: flex;
-      flex-wrap: nowrap; /* Prevent stacking */
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 30px;
+      gap: 20px;
       align-items: center;
-      overflow-x: auto; /* Scroll if needed */
+      padding: 10px 0;
     }
 
     footer .social-icons div {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       color: black;
       font-weight: bold;
-      white-space: nowrap;
+      font-size: 14px;
     }
 
-    /* Disable mobile stacking (optional override if needed) */
-    @media (max-width: 600px) {
-      /* No changes here to preserve desktop-like layout on mobile */
+    footer .social-icons img {
+      width: 30px;
+      height: 30px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+
+    @media (max-width: 500px) {
+      .header-container {
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .top-nav {
+        gap: 10px;
+        padding: 8px;
+      }
+
+      .top-nav a {
+        font-size: 12px;
+        padding: 5px 8px;
+      }
+
+      footer .social-icons {
+        gap: 10px;
+      }
+
+      footer .social-icons div {
+        font-size: 12px;
+        gap: 5px;
+      }
+
+      footer .social-icons img {
+        width: 24px;
+        height: 24px;
+      }
+
+      p {
+        font-size: 14px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="header-container">
-    <img src="IMG-20240327-WA0011.jpg" alt="M.E.M.I Logo">
-    <p style="margin-top: 10px; font-size: 18px; font-weight: bold; color: blue;">MORNINGSTAR EVANGELISTIC MINISTRY</p>
-  </div>
-
-  <p style="margin-top: 10px; font-size: 18px; font-weight: bold;">WELCOME TO MEMI FAMILY OFFICIAL WEBSITE</p>
-
-  <p>
-    The church was started in the year 2005 with Apostle Martin Gundu together with Pastor George Ngonga<br><br>
-    Revelation 22:16 (KJV): I Jesus have sent mine angel to testify unto you these things in the churches.
-    I am the root and the offspring of David, and the Bright and Morningstar.
-  </p>
-
-  <nav class="top-nav">
-    <a href="order.html">Order of service</a>
-    <a href="about.html">About us</a>
-    <a href="pillars.html">Our pillars</a>
-    <a href="branches.html">Branches</a>
-  </nav>
-
-  <footer>
-    <p>Connect with us:</p>
-    <div class="social-icons">
-      <div>
-        <img src="5068731.png" alt="Phone Icon" width="50" height="50">
-        <div>+254725502461</div>
-      </div>
-      <div>
-        <img src="6422199.png" alt="Facebook Icon" width="50" height="50">
-        <div>Memi family</div>
-      </div>
-      <div>
-        <img src="6422200.png" alt="Instagram Icon" width="50" height="50">
-        <div>Memi family</div>
-      </div>
-      <div>
-        <img src="6422213.png" alt="WhatsApp Icon" width="50" height="50">
-        <div>+254725502461</div>
-      </div>
+  <div class="container">
+    <div class="header-container">
+      <img src="IMG-20240327-WA0011.jpg" alt="M.E.M.I Logo">
+      <p style="margin-top: 10px; font-size: 18px; font-weight: bold; color: blue;">MORNINGSTAR EVANGELISTIC MINISTRY</p>
     </div>
-  </footer>
+
+    <p style="margin-top: 10px; font-size: 18px; font-weight: bold;">WELCOME TO MEMI FAMILY OFFICIAL WEBSITE</p>
+
+    <p>
+      The church was started in the year 2005 with Apostle Martin Gundu together with Pastor George Ngonga<br><br>
+      Revelation 22:16 (KJV): I Jesus have sent mine angel to testify unto you these things in the churches.
+      I am the root and the offspring of David, and the Bright and Morningstar.
+    </p>
+
+    <nav class="top-nav">
+      <a href="order.html">Order of service</a>
+      <a href="about.html">About us</a>
+      <a href="pillars.html">Our pillars</a>
+      <a href="branches.html">Branches</a>
+    </nav>
+
+    <footer>
+      <p>Connect with us:</p>
+      <div class="social-icons">
+        <div>
+          <img src="5068731.png" alt="Phone Icon">
+          <div>+254725502461</div>
+        </div>
+        <div>
+          <img src="6422199.png" alt="Facebook Icon">
+          <div>Memi family</div>
+        </div>
+        <div>
+          <img src="6422200.png" alt="Instagram Icon">
+          <div>Memi family</div>
+        </div>
+        <div>
+          <img src="6422213.png" alt="WhatsApp Icon">
+          <div>+254725502461</div>
+        </div>
+      </div>
+    </footer>
+  </div>
 
 </body>
 </html>
