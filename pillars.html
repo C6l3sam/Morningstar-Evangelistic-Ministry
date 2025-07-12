@@ -13,9 +13,9 @@
       background-position: center;
       background-repeat: no-repeat;
       color: aliceblue;
+      position: relative;
     }
 
-    /* Optional overlay to improve text readability */
     body::before {
       content: "";
       position: absolute;
@@ -25,18 +25,35 @@
     }
 
     header {
-      padding: 20px;
+      padding: 20px 10px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     header img {
-      width: 70px;
-      height: 70px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       opacity: 0.85;
       mix-blend-mode: lighten;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .home-link {
+      color: lightblue;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      background-color: rgba(255,255,255,0.1);
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .home-link:hover {
+      background-color: rgba(255,255,255,0.3);
     }
 
     h1 {
@@ -49,39 +66,73 @@
       font-size: 18px;
       max-width: 600px;
       margin: 0 auto;
+      padding: 10px;
     }
 
     footer {
       background-color: white;
       text-align: center;
-      padding: 20px;
+      padding: 20px 10px;
       margin-top: 30px;
       color: black;
     }
 
-    footer span {
-      font-size: 18px;
-      margin-left: 10px;
+    footer h3 {
+      margin-bottom: 15px;
+      color: #000;
     }
 
-    footer img {
-      vertical-align: middle;
-      margin: 10px 5px;
-    }
-
-    footer .social {
+    .footer-contact {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      flex-direction: column;
       align-items: center;
+      gap: 15px;
     }
 
-    footer .social div {
+    .contact-item {
       display: flex;
       align-items: center;
       gap: 10px;
-      color: black;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .contact-item img {
+      width: 40px;
+      height: 40px;
+    }
+
+    @media (max-width: 500px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .home-link {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      ol {
+        font-size: 16px;
+        padding-left: 20px;
+      }
+
+      .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .contact-item img {
+        width: 30px;
+        height: 30px;
+      }
     }
   </style>
 </head>
@@ -89,6 +140,7 @@
 
   <header>
     <img src="IMG-20240327-WA0011.jpg" alt="M.E.M.I Logo">
+    <a class="home-link" href="index.html">← Home</a>
   </header>
 
   <h1><b>PILLARS</b></h1>
@@ -101,22 +153,22 @@
   </ol>
 
   <footer>
-    <p>Connect with us:</p>
-    <div class="social">
-      <div>
-        <img src="5068731.png" alt="Phone Icon" width="50" height="50">
+    <h3>Connect with us:</h3>
+    <div class="footer-contact">
+      <div class="contact-item">
+        <img src="5068731.png" alt="Phone Icon">
         <span>+254725502461</span>
       </div>
-      <div>
-        <img src="6422199.png" alt="Facebook Icon" width="50" height="50">
+      <div class="contact-item">
+        <img src="6422199.png" alt="Facebook Icon">
         <span>Memi family</span>
       </div>
-      <div>
-        <img src="6422200.png" alt="Instagram Icon" width="50" height="50">
+      <div class="contact-item">
+        <img src="6422200.png" alt="Instagram Icon">
         <span>Memi family</span>
       </div>
-      <div>
-        <img src="6422213.png" alt="WhatsApp Icon" width="50" height="50">
+      <div class="contact-item">
+        <img src="6422213.png" alt="WhatsApp Icon">
         <span>+254725502461</span>
       </div>
     </div>

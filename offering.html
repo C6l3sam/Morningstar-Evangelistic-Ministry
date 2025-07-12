@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Offerings</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url("wallpaper2you_411788.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    header img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-top: 10px;
+      color: #ffd700;
+      text-shadow: 1px 1px 4px black;
+    }
+
+    .box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid white;
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: 30px auto;
+      backdrop-filter: blur(6px);
+    }
+
+    .label {
+      font-size: 18px;
+      color: #00ffff;
+      margin-top: 15px;
+    }
+
+    .value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      background-color: rgba(255,255,255,0.2);
+      border-radius: 5px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    a.back-link:hover {
+      background-color: rgba(255,255,255,0.4);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="IMG-20240327-WA0011.jpg" alt="M.E.M.I Logo">
+    <h1>Support the Ministry</h1>
+  </header>
+
+  <div class="box">
+    <p class="label">MEMI NATIONAL ACCOUNT</p>
+    <p class="value">PAYBILL: <span style="color:#00ff99;">400200</span></p>
+    <p class="label">ACCOUNT NUMBER</p>
+    <p class="value">40001785</p>
+    <p style="margin-top: 20px;">Your support helps spread the Gospel and serve our community. Thank you!</p>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+</body>
+</html>

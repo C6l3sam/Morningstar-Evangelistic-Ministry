@@ -72,34 +72,30 @@
       color: black;
     }
 
-    footer span {
-      font-size: 16px;
-      margin-left: 10px;
-      font-weight: bold;
+    footer h3 {
+      margin-bottom: 15px;
+      color: #000;
     }
 
-    footer img {
-      vertical-align: middle;
-      margin: 10px 5px;
-    }
-
-    footer .social {
+    .footer-contact {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      flex-direction: column;
       align-items: center;
+      gap: 15px;
     }
 
-    footer .social div {
+    .contact-item {
       display: flex;
       align-items: center;
       gap: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
+    .contact-item img {
+      width: 40px;
+      height: 40px;
     }
 
     @media (max-width: 500px) {
@@ -117,11 +113,12 @@
         font-size: 16px;
       }
 
-      footer span {
-        font-size: 14px;
+      .contact-item {
+        flex-direction: column;
+        align-items: center;
       }
 
-      footer img {
+      .contact-item img {
         width: 30px;
         height: 30px;
       }
@@ -138,22 +135,22 @@
   <p>SEEKING TO EMULATE THE FIRST CENTURY CHRISTIANITY</p>
 
   <footer>
-    <p>Connect with us:</p>
-    <div class="social">
-      <div>
-        <img src="5068731.png" alt="Phone Icon" width="50" height="50">
+    <h3>Connect with us:</h3>
+    <div class="footer-contact">
+      <div class="contact-item">
+        <img src="5068731.png" alt="Phone Icon">
         <span>+254725502461</span>
       </div>
-      <div>
-        <img src="6422199.png" alt="Facebook Icon" width="50" height="50">
+      <div class="contact-item">
+        <img src="6422199.png" alt="Facebook Icon">
         <span>Memi family</span>
       </div>
-      <div>
-        <img src="6422200.png" alt="Instagram Icon" width="50" height="50">
+      <div class="contact-item">
+        <img src="6422200.png" alt="Instagram Icon">
         <span>Memi family</span>
       </div>
-      <div>
-        <img src="6422213.png" alt="WhatsApp Icon" width="50" height="50">
+      <div class="contact-item">
+        <img src="6422213.png" alt="WhatsApp Icon">
         <span>+254725502461</span>
       </div>
     </div>

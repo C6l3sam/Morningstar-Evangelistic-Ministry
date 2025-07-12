@@ -15,6 +15,8 @@
       background-position: center;
       overflow-x: hidden;
       padding: 0 10px;
+      color: aliceblue;
+      position: relative;
     }
 
     body::before {
@@ -64,10 +66,10 @@
     }
 
     ol {
-      color: aliceblue;
       max-width: 800px;
       margin: auto;
       padding-left: 20px;
+      font-size: 18px;
     }
 
     a {
@@ -88,22 +90,27 @@
       color: black;
     }
 
-    footer span {
-      font-size: 16px;
-      margin-left: 10px;
-      font-weight: bold;
+    footer h3 {
+      margin-bottom: 15px;
     }
 
-    footer .social {
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .contact-item {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 10px;
-      flex-wrap: wrap;
-      margin: 10px 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
     }
 
-    footer img {
+    .contact-item img {
       width: 40px;
       height: 40px;
     }
@@ -120,14 +127,17 @@
       }
 
       ol {
-        font-size: 14px;
+        font-size: 16px;
+        padding-left: 20px;
       }
 
-      footer span {
-        font-size: 14px;
+      .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
       }
 
-      footer img {
+      .contact-item img {
         width: 30px;
         height: 30px;
       }
@@ -135,12 +145,14 @@
   </style>
 </head>
 <body>
+
   <header>
     <img src="IMG-20240327-WA0011.jpg" alt="M.E.M.I Logo">
     <a class="home-link" href="index.html">← Home</a>
   </header>
 
   <h1>Our Branches</h1>
+
   <ol>
     <li><a href="Memi.html">MEMI family Headquarters Gachie</a></li>
     <li><a href="makongeni.html">Makongeni MEMI family</a></li>
@@ -156,34 +168,33 @@
     <li><a href="runyenjes.html">Runyenjes MEMI family</a></li>
     <li><a href="kilae.html">Kilae MEMI family</a></li>
     <li><a href="sauri.html">Sauri MEMI family</a></li>
-    <li><a href="semedala.html">Seme dala MEMI family</a></li>
+    <li><a href="semedala.html">Seme Dala MEMI family</a></li>
     <li><a href="manyatta.html">MEMI Family Manyatta</a></li>
     <li><a href="mamboleo.html">MEMI Family Mamboleo</a></li>
     <li><a href="bandani.html">MEMI Family Bandani</a></li>
   </ol>
 
   <footer>
-    <p>Connect with us:</p>
-
-    <div class="social">
-      <img src="5068731.png" alt="Phone Icon">
-      <span>+254725502461</span>
-    </div>
-
-    <div class="social">
-      <img src="6422199.png" alt="Facebook Icon">
-      <span>Memi family</span>
-    </div>
-
-    <div class="social">
-      <img src="6422200.png" alt="Instagram Icon">
-      <span>Memi family</span>
-    </div>
-
-    <div class="social">
-      <img src="6422213.png" alt="WhatsApp Icon">
-      <span>+254725502461</span>
+    <h3>Connect with us:</h3>
+    <div class="footer-contact">
+      <div class="contact-item">
+        <img src="5068731.png" alt="Phone Icon">
+        <span>+254725502461</span>
+      </div>
+      <div class="contact-item">
+        <img src="6422199.png" alt="Facebook Icon">
+        <span>Memi family</span>
+      </div>
+      <div class="contact-item">
+        <img src="6422200.png" alt="Instagram Icon">
+        <span>Memi family</span>
+      </div>
+      <div class="contact-item">
+        <img src="6422213.png" alt="WhatsApp Icon">
+        <span>+254725502461</span>
+      </div>
     </div>
   </footer>
+
 </body>
 </html>

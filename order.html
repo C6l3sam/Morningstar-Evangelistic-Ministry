@@ -83,34 +83,36 @@
 
     footer {
       background-color: white;
+      color: black;
       text-align: center;
       padding: 20px 10px;
       margin-top: 40px;
-      color: black;
     }
 
-    footer span {
-      font-size: 16px;
-      margin-left: 10px;
-      color: black;
+    footer h3 {
+      margin-bottom: 15px;
+      color: #000;
     }
 
-    footer img {
-      vertical-align: middle;
-      margin-top: 10px;
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
     }
 
-    footer .social {
-      margin: 10px 0;
+    .contact-item {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 10px;
-      flex-wrap: wrap;
+      font-size: 16px;
+      font-weight: bold;
+      color: #000;
     }
 
-    footer .social span {
-      font-weight: bold;
+    .contact-item img {
+      width: 40px;
+      height: 40px;
     }
 
     @media (max-width: 500px) {
@@ -121,6 +123,11 @@
 
       .home-link {
         margin-top: 10px;
+      }
+
+      .contact-item {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -183,19 +190,24 @@
   </table>
 
   <footer>
-    <p>Connect with us:</p>
-    <div class="social">
-      <img src="5068731.png" alt="Phone Icon" width="50" height="50">
-      <span>+254725502461</span>
-
-      <img src="6422199.png" alt="Facebook Icon" width="50" height="50">
-      <span>Memi family</span>
-
-      <img src="6422200.png" alt="Instagram Icon" width="50" height="50">
-      <span>Memi family</span>
-
-      <img src="6422213.png" alt="WhatsApp Icon" width="50" height="50">
-      <span>+254725502461</span>
+    <h3>Connect with us:</h3>
+    <div class="footer-contact">
+      <div class="contact-item">
+        <img src="5068731.png" alt="Phone Icon">
+        <span>+254725502461</span>
+      </div>
+      <div class="contact-item">
+        <img src="6422199.png" alt="Facebook Icon">
+        <span>Memi family</span>
+      </div>
+      <div class="contact-item">
+        <img src="6422200.png" alt="Instagram Icon">
+        <span>Memi family</span>
+      </div>
+      <div class="contact-item">
+        <img src="6422213.png" alt="WhatsApp Icon">
+        <span>+254725502461</span>
+      </div>
     </div>
   </footer>
 
