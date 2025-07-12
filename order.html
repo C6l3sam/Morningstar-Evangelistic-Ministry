@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <title>Order of Service</title>
   <style>
     body {
@@ -13,20 +14,48 @@
       background-size: cover;
       background-position: center;
       color: aliceblue;
-      padding: 0 20px;
+      padding: 0 10px;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
     }
 
     header {
-      padding: 20px;
+      padding: 20px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
 
     header img {
-      width: 70px;
-      height: 70px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       opacity: 0.85;
       mix-blend-mode: lighten;
       filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.4));
+    }
+
+    .home-link {
+      color: lightblue;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      background-color: rgba(255,255,255,0.1);
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .home-link:hover {
+      background-color: rgba(255,255,255,0.3);
     }
 
     h1, h2 {
@@ -35,33 +64,33 @@
     }
 
     table {
-      width: 90%;
+      width: 100%;
       max-width: 600px;
       margin: 20px auto;
       background-color: white;
       color: black;
       border-collapse: collapse;
-    }
-
-    table, th, td {
       border: 1px solid black;
     }
 
-    td {
+    th, td {
+      border: 1px solid black;
       padding: 10px;
       text-align: center;
       font-weight: bold;
+      font-size: 16px;
     }
 
     footer {
       background-color: white;
       text-align: center;
-      padding: 20px;
+      padding: 20px 10px;
       margin-top: 40px;
+      color: black;
     }
 
     footer span {
-      font-size: 18px;
+      font-size: 16px;
       margin-left: 10px;
       color: black;
     }
@@ -73,90 +102,22 @@
 
     footer .social {
       margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
     }
-  </style>
-</head>
 
-<body>
-  <header>
-    <img src="IMG-20240327-WA0011.jpg" alt="M.E.M.I Logo">
-  </header>
+    footer .social span {
+      font-weight: bold;
+    }
 
-  <h1><b>ORDER OF SERVICE</b></h1>
+    @media (max-width: 500px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-  <h2><u>Sunday Service</u></h2>
-  <table>
-    <tr>
-      <td>08:00am - 09:00am</td>
-      <td>Intercessory</td>
-    </tr>
-    <tr>
-      <td>09:00am - 10:00am</td>
-      <td>Worship and Prayers</td>
-    </tr>
-    <tr>
-      <td>10:00am - 11:00am</td>
-      <td>1st Service</td>
-    </tr>
-    <tr>
-      <td>11:00am - 12:00pm</td>
-      <td>Praise & Testimonies</td>
-    </tr>
-    <tr>
-      <td>12:00pm - 01:00pm</td>
-      <td>Main Service</td>
-    </tr>
-  </table>
-
-  <h2><u>Weekly Services</u></h2>
-  <table>
-    <tr>
-      <td>Morning Glory & Evening Devotions</td>
-      <td>Daily</td>
-    </tr>
-    <tr>
-      <td>Fellowship</td>
-      <td>Wednesdays & Fridays (3:00pm - 5:00pm)</td>
-    </tr>
-    <tr>
-      <td>Revivals</td>
-      <td>All Saturday Evenings</td>
-    </tr>
-    <tr>
-      <td>Kesha</td>
-      <td>Twice per month</td>
-    </tr>
-    <tr>
-      <td>Home fellowships</td>
-      <td>Tuesdays&Thursdays</td>
-    </tr>
-    <tr>
-      <td></td>
-    </tr>
-  </table>
-
-  <footer>
-    <p>Connect with us:</p>
-
-    <div class="social">
-      <img src="5068731.png" alt="Phone Icon" width="50" height="50">
-      <span>+254725502461</span>
-    </div>
-
-    <div class="social">
-      <img src="6422199.png" alt="Facebook Icon" width="50" height="50">
-      <span>Memi family</span>
-    </div>
-
-    <div class="social">
-      <img src="6422200.png" alt="Instagram Icon" width="50" height="50">
-      <span>Memi family</span>
-    </div>
-
-    <div class="social">
-      <img src="6422213.png" alt="WhatsApp Icon" width="50" height="50">
-      <span>+254725502461</span>
-    </div>
-  </footer>
-</body>
-</html>
+      .home-link {
+        margin-top: 10px;
