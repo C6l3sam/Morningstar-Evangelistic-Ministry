@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>MORNINGSTAR EVANGELISTIC MINISTRY</title>
   <style>
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -16,7 +15,6 @@
       color: aliceblue;
     }
 
-  
     body::before {
       content: "";
       position: absolute;
@@ -53,118 +51,90 @@
       font-weight: bold;
     }
 
-   footer {
-  background-color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 30px;
-  color: black; /* Ensure footer text is visible */
-  position: relative;
-  z-index: 1;
-}
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap; /* Keep in one line */
+      overflow-x: auto;  /* Allow horizontal scroll on small screens */
+      gap: 20px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 12px 20px;
+      border-bottom: 2px solid rgba(255,255,255,0.2);
+    }
 
+    .top-nav a {
+      color: aliceblue;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      transition: background 0.3s;
+      white-space: nowrap; /* Prevent breaking onto new line */
+    }
+
+    .top-nav a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+
+    footer {
+      background-color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      color: black;
+      position: relative;
+      z-index: 1;
+    }
 
     footer p, footer span {
       color: black;
     }
 
-  footer .social-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  align-items: center;
-}
+    footer .social-icons {
+      display: flex;
+      flex-wrap: nowrap; /* Prevent stacking */
+      justify-content: center;
+      gap: 30px;
+      align-items: center;
+      overflow-x: auto; /* Scroll if needed */
+    }
 
-footer .social-icons div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: black;
-  font-weight: bold;
-}
-@media (max-width: 600px) {
-  .header-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    footer .social-icons div {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: black;
+      font-weight: bold;
+      white-space: nowrap;
+    }
 
-  .top-nav {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .top-nav a {
-    padding: 10px;
-    width: 100%;
-  }
-
-  footer .social-icons {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .welcome-message {
-    text-align: center;
-  }
-
-  body {
-    font-size: 16px;
-  }
-}
-
-
-    .top-nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 12px 20px;
-  border-bottom: 2px solid rgba(255,255,255,0.2);
-}
-
-.top-nav a {
-  color: aliceblue;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 12px;
-  transition: background 0.3s;
-}
-
-.top-nav a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-}
-
+    /* Disable mobile stacking (optional override if needed) */
+    @media (max-width: 600px) {
+      /* No changes here to preserve desktop-like layout on mobile */
+    }
   </style>
 </head>
 <body>
 
- <div class="header-container">
-  <img src="IMG-20240327-WA0011.jpg" alt="M.E.M.I Logo">
-  <p style="margin-top: 10px; font-size: 18px; font-weight: bold; color: blue;">MORNINGSTAR EVANGELISTIC MINISTRY</p>
-  
-</div>
-<p style="margin-top: 10px; font-size: 18px; font-weight: bold;">WELCOME TO MEMI FAMILY OFFICIAL WEBSITE</p>
+  <div class="header-container">
+    <img src="IMG-20240327-WA0011.jpg" alt="M.E.M.I Logo">
+    <p style="margin-top: 10px; font-size: 18px; font-weight: bold; color: blue;">MORNINGSTAR EVANGELISTIC MINISTRY</p>
+  </div>
 
-  
-    <p>
-      The church was started in the year 2005 with Apostle Martin Gundu together with Pastor George Ngonga<br><br>
-      Revelation 22:16 (KJV): I Jesus have sent mine angel to testify unto you these things in the churches.
-      I am the root and the offspring of David, and the Bright and Morningstar.
-    </p>
-<nav class="top-nav">
-  <a href="order.html">Order of service</a>
-  <a href="about.html">About us</a>
-  <a href="pillars.html">Our pillars</a>
-  <a href="branches.html">Branches</a>
-<a href="register.php">Register</a>
+  <p style="margin-top: 10px; font-size: 18px; font-weight: bold;">WELCOME TO MEMI FAMILY OFFICIAL WEBSITE</p>
 
+  <p>
+    The church was started in the year 2005 with Apostle Martin Gundu together with Pastor George Ngonga<br><br>
+    Revelation 22:16 (KJV): I Jesus have sent mine angel to testify unto you these things in the churches.
+    I am the root and the offspring of David, and the Bright and Morningstar.
+  </p>
 
-</nav>
-
+  <nav class="top-nav">
+    <a href="order.html">Order of service</a>
+    <a href="about.html">About us</a>
+    <a href="pillars.html">Our pillars</a>
+    <a href="branches.html">Branches</a>
+  </nav>
 
   <footer>
     <p>Connect with us:</p>
